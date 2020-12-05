@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	//Load trang header
 	$this->load->view('layout/header');
 ?> 
-	<div class="container" style="margin-top:30px">
+	<div class="container" style="margin-top:30px; margin-left:10px">
 		<div class="row">
 			<?php 
 				//Load trang sidebar
