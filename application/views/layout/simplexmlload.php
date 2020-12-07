@@ -1,4 +1,4 @@
-<div class="col-sm-8" style="width: 70%; margin:auto">
+<div class="col-sm-12" style="width: 80%; margin:auto">
 
 
 <?php

@@ -18,7 +18,8 @@
 		$password = strip_tags($password);
 
 		if ($username == "" || $password =="") {
-			echo "<h5 style='text-align: center; color: red; margin: 20px'>Bạn phải nhập đủ thông tin tên đăng nhập và mật khẩu!</h5>";
+			echo "<div class='alert alert-warning' role='alert'><h5 style='text-align: center; color: red; margin: 20px'>Bạn phải nhập đủ thông tin tên đăng nhập và mật khẩu!</h5></div>";
+
 		}
 		else{
 			//Kiểm tra thông tin đăng nhập trong csdl website
@@ -26,7 +27,7 @@
 			$que = mysqli_query($conn,$sqlCheck);
 			$numRows = mysqli_num_rows($que); //Gán giá trị số lượng hàng trong $que vào $numRows
 			if ($numRows==0) { //Giá trị trong $numRows sẽ bằng 0 nếu nhập sai tên đăng nhập hoặc mật khẩu
-				echo "<h5 style='text-align: center; color: red; margin: 20px'>Tên đăng nhập hoặc mật khẩu không đúng!</h5>";
+				echo "<div class='alert alert-warning' role='alert'><h5 style='text-align: center; color: red; margin: 20px'>Tên đăng nhập hoặc mật khẩu không đúng!</h5></div>";
 			}
 			else{
 				//Ghi thông tin user vào session
@@ -38,6 +39,7 @@
 					$_SESSION["fullname"] = $data["fullname"];
 		    	}
 				//Chuyển hướng đến trang chủ sau khi đăng nhập thành công
+				
 				header('Location: index.php');
 			}
 		}
@@ -50,16 +52,20 @@
 				<td colspan="2"><h1>Đăng nhập</h1></td>
 			</tr>
 			<tr>
-				<td>Tên đăng nhập</td>
-				<td><input type="text" name="username" size="50" style="margin: 20px"></td>
+				<td>Tên đăng nhập <b>(*)</b>:</td>
+				<td><input type="text" name="username" size="50" style="margin: 15px"></td>
 			</tr>
 			<tr>
-				<td>Mật khẩu</td>
-				<td><input type="password" name="password" size="50" style="margin: 20px"></td>
+				<td>Mật khẩu <b>(*)</b>:</td>
+				<td><input type="password" name="password" size="50" style="margin: 15px"></td>
+			</tr>
+			<tr>
+				<td nowrap="nowrap" style="color: red">Bạn phải nhập các trường có gắn dấu <b>(*)</b></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center">
-					<input type="submit" name="btnSubmit" value="Đăng nhập" style="margin: 20px">
+					<input type="submit" name="btnSubmit" class="btn btn-outline-primary" value="Đăng nhập" style="margin: 10px">
+					<input type="reset" class="btn btn-outline-secondary" value="Hủy">
 				</td>
 			</tr>
 		</table>

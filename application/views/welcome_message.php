@@ -10,16 +10,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	$this->load->view('layout/header');
 ?> 
 	<div class="container" style="margin-top:30px; margin-left:10px">
-		<div class="row">
-			<?php 
-				//Load trang sidebar
-				$this->load->view('layout/sidebar');
-			?>
-			<?php
+		<?php
 			//Load trang main
 				$this->load->view('layout/simplexmlload');
 			?> 
-		</div>
 	</div>
 <?php
 	//Load trang footer

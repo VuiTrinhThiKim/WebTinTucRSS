@@ -17,7 +17,7 @@
 
 			//Kiểm tra dữ liệu trong input không được rỗng
 			if($username == "" || $password == "" || $_POST["passwordcheck"] == "" || $name == "" || $email == "") {
-				echo "<h5 style='text-align: center; color: red'>Bạn vui lòng nhập đầy đủ thông tin!</h5>";
+				echo "<div class='alert alert-warning' role='alert'><h5 style='text-align: center; color: red'>Bạn vui lòng nhập đầy đủ thông tin!</h5></div>";
 			}
 			else{
 				//Kiểm tra dữ liệu $password và $passwordcheck
@@ -29,7 +29,7 @@
 					echo "<h5 style='text-align: center; color: blue'>Chúc mừng! Bạn đã đăng ký thành công!!!</h5>";
 				}
 				else{
-					echo "<h5 style='text-align: center; color: red'>Nhập lại mật khẩu sai, vui lòng nhập lại!</h5>";
+					echo "<div class='alert alert-warning' role='alert'><h5 style='text-align: center; color: red'>Nhập lại mật khẩu sai, vui lòng nhập lại!</h5></div>";
 				}
 			}
 		}
@@ -41,30 +41,32 @@
 					<td colspan="2"><h1>Đăng kí tài khoản</h1></td>
 				</tr>	
 				<tr>
-					<td>Tên đăng nhập:</td>
-					<td><input type="text" id="username" name="username" size="50" style="margin: 20px"></td>
+					<td>Tên đăng nhập <b>(*)</b>:</td>
+					<td><input type="text" id="username" name="username" size="50" style="margin: 15px"></td>
 				</tr>
 				<tr>
-					<td>Mật khẩu:</td>
-					<td><input type="password" id="pass" name="password" size="50" style="margin: 20px; ma"></td>
+					<td>Mật khẩu <b>(*)</b>:</td>
+					<td><input type="password" id="pass" name="password" size="50" style="margin: 15px; ma"></td>
 				</tr>
 				<tr>
-					<td>Nhập lại mật khẩu:</td>
-					<td><input type="password" id="passcheck" name="passwordcheck" size="50" style="margin: 20px; ma"></td>
+					<td>Nhập lại mật khẩu <b>(*)</b>:</td>
+					<td><input type="password" id="passcheck" name="passwordcheck" size="50" style="margin: 15px; ma"></td>
 				</tr>
 				<tr>
-					<td>Họ và tên:</td>
-					<td><input type="text" id="name" name="name" size="50" style="margin: 20px"></td>
+					<td>Họ và tên: <b>(*)</b></td>
+					<td><input type="text" id="name" name="name" size="50" style="margin: 15px"></td>
 				</tr>
 				<tr>
-					<td>Email:</td>
-					<td><input type="text" id="email" name="email" size="50" style="margin: 20px"></td>
+					<td>Email: <b>(*)</b></td>
+					<td><input type="text" id="email" name="email" size="50" style="margin: 15px"></td>
+				</tr>
+				<tr>
+					<td nowrap="nowrap" style="color: red">Bạn phải nhập các trường có gắn dấu <b>(*)</b></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center">
-						<input type="submit" name="btnSubmit" value="Đăng kí" style="margin: 20px">
-
-						<input type="reset" value="Đặt lại" style="margin: 20px">
+						<input type="submit" name="btnSubmit" class="btn btn-outline-primary" value="Đăng kí">
+						<input type="reset" class="btn btn-outline-secondary" value="Đặt lại">
 					</td>
 				</tr>
 
