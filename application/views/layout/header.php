@@ -22,27 +22,27 @@
 	</div>
 
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
-		<a class="navbar-brand" href="/Web/index.php"><TABLE>TRANG CHỦ</TABLE></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-		</button>
+		<a class="navbar-brand" href="/WebTinTucRSS/index.php">TRANG CHỦ</a>
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="index.php?category=thoi-su">TIN THỜI SỰ<span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						THỂ LOẠI
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">TIN GIÁO DỤC</a>
-						<a class="dropdown-item" href="#">TIN CHÍNH TRỊ</a>
-						<a class="dropdown-item" href="#">TIN BÓNG ĐÁ</a>
-						<a class="dropdown-item" href="#">TIN GIẢI TRÍ</a>
-					</div>
-				</li>
+			<ul class="navbar-nav">
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+					TIN TỨC
+				</a>
+				
+				<div class="dropdown-menu">
+					<form action="simplexmlload.php" method="GET">
+					<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/giao-duc.rss">Giáo Dục</a>
+					<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/phap-luat.rss">Pháp Luật</a>
+					<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/kinh-doanh.rss">Kinh Doanh</a>
+					<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/suc-khoe.rss">Sức Khỏe</a>
+					<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/du-lich.rss">Du Lịch</a>
+					<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/the-thao.rss">Thể Thao</a>
+						</form>
+				</div>
+				
+			</li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
