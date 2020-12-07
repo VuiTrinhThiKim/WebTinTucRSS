@@ -1,18 +1,5 @@
 
 	<div class="col-sm-2">
-		<h5>Chọn thể loại</h5>
-		<form method="post" action="">
-	<select name="feedurl" id="danhmuc">
-		<option value="https://vnexpress.net/rss/tin-moi-nhat.rss">Tin mới nhất</option>
-		<option value="https://vnexpress.net/rss/chinh-tri.rss">Chính trị</option>
-		<option value="https://vnexpress.net/rss/giao-duc.rss">Giáo dục</option>
-		<option value="https://vnexpress.net/rss/the-thao.rss">Thể thao</option>
-		<option value="https://vnexpress.net/rss/van-hoa.rss">Văn hóa</option>
-		<option value="https://vnexpress.net/rss/kinh-doanh.rss">Kinh doanh</option>
-		<option value="https://vnexpress.net/rss/phap-luat.rss">Pháp luật</option>
-	</select>><input type="submit" name="submit" value='Chọn'>
-</form>
-
 	   	<h5>Danh mục</h5>
 	   	<ul class="nav nav-pills flex-column">
 	    	<li class="nav-item"><a  class="nav-link active" href="#">Trang chủ</a></li>

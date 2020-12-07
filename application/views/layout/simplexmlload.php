@@ -3,6 +3,12 @@
 
 <?php
 $url = "https://vnexpress.net/rss/tin-moi-nhat.rss";
+if(isset($_GET["link"]))
+{
+	if($_GET["link"] != ""){
+		$url = $_GET["link"];
+		}
+}
 if(isset($_POST['submit']))
 {
 	if($_POST['feedurl'] != ''){
@@ -35,7 +41,7 @@ if(!empty($feeds)){
 			<span style="font-size:14px; color: gray; letter-spacing:1px;"><?php echo $pubDate ?></span>
 		</div>
 		<div class="post-content" style="font-size: 18px; color:black">
-			 <h4><a class="feed_description" style="font-size:8px"><?php echo $description; ?></a></h4>
+			 <h4><a class="feed_description" style="font-size:8px width:small height:small"><?php echo $description; ?></a></h4>
 		</div>
 	</div>
 <?php
