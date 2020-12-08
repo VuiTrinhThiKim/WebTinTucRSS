@@ -1,4 +1,4 @@
-<div class="col-sm-12" style="width: 80%; margin:auto">
+<div class="col-sm-12" style="width: 70%; margin:auto">
 
 
 <?php
@@ -9,12 +9,12 @@ if(isset($_GET["link"]))
 		$url = $_GET["link"];
 		}
 }
-if(isset($_POST['submit']))
-{
-	if($_POST['feedurl'] != ''){
-		$url = $_POST['feedurl'];
-	}
-}
+//if(isset($_POST['submit']))
+//{
+//    if($_POST['feedurl'] != ''){
+//        $url = $_POST['feedurl'];
+//    }
+//}
 $invalidurl = false;
 if(@simplexml_load_file($url)){
 	$feeds = simplexml_load_file($url);
@@ -35,7 +35,7 @@ if(!empty($feeds)){
 		$pubDate = strftime("%Y-%m-%d %H:%M:%S", strtotime($postDate));
 		 if($i>=12) break;
 ?>
-	<div class="post" style="border: 0px solid gray;padding: 5px;border-radius:3px;margin-top:15px">
+	<div class="post" style="border-bottom: 1px solid gray;padding: 5px;border-radius:3px;margin-top:15px">
 		<div class="post-head" style="font-size:14px; color: gray; letter-spacing:1px;">
 			<h2><a class="feed_title" href="<?php echo $link; ?>"><?php echo $title; ?></a></h2>
 			<span style="font-size:14px; color: gray; letter-spacing:1px;"><?php echo $pubDate ?></span>

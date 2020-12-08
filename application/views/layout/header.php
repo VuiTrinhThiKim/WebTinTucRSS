@@ -21,7 +21,7 @@
 	</div>
 
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
-		<a class="navbar-brand" href="/Web/index.php"><TABLE>TRANG CHỦ</TABLE></a>
+		<a class="navbar-brand" href="/WebTinTucRSS/index.php"><TABLE>TRANG CHỦ</TABLE></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 		</button>
@@ -47,14 +47,16 @@
 							<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/suc-khoe.rss">Sức Khỏe</a>
 							<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/du-lich.rss">Du Lịch</a>
 							<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/the-thao.rss">Thể Thao</a>
-							<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/quoc-phong.rss">Quốc Phòng</a>
+							<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/khoa-hoc.rss">Khoa Học</a>
 						</form>
 					</div>
 				</li>
 			</ul>
+			<form class="form-inline my-2 my-lg-0" action="search.php" method="GET">
+				<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search" name="search-bar">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit-search">Tìm</button>
+			</form>
 			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 				<?php
 					if( isset($_SESSION['username']) && !empty($_SESSION['username']) )
 					{
