@@ -1,21 +1,16 @@
+<?php
+	session_start();
+?>
 
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-<?php 
-	//Load trang header
-	$this->load->view('layout/header');
-?> 
+<?php include "application/views/layout/header.php" ?>
+ 
 	<div class="container" style="margin-top:30px; margin-left:10px">
-		<?php
-			//Load trang main
-				$this->load->view('layout/simplexmlload');
-			?> 
+		<?php include "application/views/layout/simplexmlload.php" ?>
+
 	</div>
-<?php
-	//Load trang footer
-	$this->load->view('layout/footer');
-?> 
+<?php include "application/views/layout/footer.php" ?>

@@ -42,12 +42,15 @@
 				<td><textarea name="content" id="content" rows="12" cols="100" style="margin: 10px"></textarea></td>
 			</tr>
 			<tr>
-				<td nowrap="nowrap">Public:</td>
-				<td><input type="checkbox" id="isPublic" name="isPublic" value="1" style="margin: 10px""> public</td>
+				<td nowrap="nowrap">Public? :</td>
+				<td>
+					<input type="checkbox" id="isPublic" name="isPublic" value="1" style="margin: 10px"">Public
+				</td>
 			</tr>
 			<tr>
 				<td nowrap="nowrap" style="color: red">Bạn phải nhập các trường có gắn dấu <b>(*)</b></td>
 			</tr>
+
 			<tr>
 				<td colspan="2" align="center">
 					<input type="submit" name="btnSubmit" class="btn btn-outline-primary" value="Thêm bài viết">
