@@ -8,7 +8,15 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	
+	<script>
+		function success() {
+			if(document.getElementById("search-bar").value==="") { 
+            document.getElementById('submit-search').disabled = true; 
+			} else { 
+            document.getElementById('submit-search').disabled = false;
+			}
+		}
+	</script>
 	<style type="text/css">
 	  	.margin-left{
 	    margin-left: 10px !important;
@@ -53,8 +61,8 @@
 				</li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0" action="search.php" method="GET">
-				<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search" name="search-bar">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit-search">Tìm</button>
+				<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search" name="search-bar" id="search-bar" onkeyup="success()">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit-search" id="submit-search" disabled>Tìm</button>
 			</form>
 			<form class="form-inline my-2 my-lg-0">
 				<?php

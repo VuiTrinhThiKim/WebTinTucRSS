@@ -1,9 +1,9 @@
 <?php
 	include 'application\views\layout\header.php'
 ?>
-<h1>Kết quả tìm kiếm</h1>
 <div class="col-sm-12" style="width: 70%; margin:auto">
 <?php
+echo "<h1>Kết quả tìm kiếm</h1>";
 $i = 0;
 $links = array("https://vnexpress.net/rss/giao-duc.rss","https://vnexpress.net/rss/phap-luat.rss","https://vnexpress.net/rss/kinh-doanh.rss","https://vnexpress.net/rss/suc-khoe.rss","https://vnexpress.net/rss/du-lich.rss","https://vnexpress.net/rss/the-thao.rss","https://vnexpress.net/rss/khoa-hoc.rss");
 foreach($links as $url){
