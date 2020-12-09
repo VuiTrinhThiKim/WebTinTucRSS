@@ -57,7 +57,7 @@ if(!empty($feeds)){
 }		
 //tìm bằng database
 			//kết nối
-			$conn = mysqli_connect("localhost","root","","rssfeeditems");
+			$conn = mysqli_connect("localhost","root","","website");
 			if($conn->connect_error)
 			{
 				die("Connect Failed: ". $conn->connect_error);
