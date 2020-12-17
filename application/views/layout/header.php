@@ -69,11 +69,11 @@
 					if( isset($_SESSION['username']) && !empty($_SESSION['username']) )
 					{
 					?>
-					    <a href="../Web/logout.php" class="btn btn-outline-primary margin-left">Đăng xuất</a>
+					    <a href="../Web/index.php/login/logout" class="btn btn-outline-primary margin-left">Đăng xuất</a>
 					    e
 					<?php }else{ ?>
-					    <a href="../Web/login.php" class="btn btn-outline-primary margin-left">Đăng nhập</a>
-						<a href="../Web/signup.php" class="btn btn-outline-light margin-left">Đăng kí</a>
+					    <a href="../Web/index.php/login" class="btn btn-outline-primary margin-left">Đăng nhập</a>
+						<a href="../Web/index.php/signup" class="btn btn-outline-light margin-left">Đăng kí</a>
 					<?php } ?>
 				
 			</form>

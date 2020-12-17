@@ -4,7 +4,7 @@ CREATE TABLE `users` (
 	`password` VARCHAR(50) NOT NULL,
 	`email` VARCHAR(50) NOT NULL,
 	`fullname` VARCHAR(50) NOT NULL COLLATE 'utf8_general_ci',
-	`createdate` DATETIME NOT NULL,
+	`signupDate` DATETIME NOT NULL,
 	
 	PRIMARY KEY (`id`),
 	UNIQUE INDEX `username` (`username`),
