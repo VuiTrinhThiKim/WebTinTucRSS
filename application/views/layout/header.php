@@ -49,18 +49,18 @@
 					
 					<div class="dropdown-menu">
 						<form action="simplexmlload.php" method="GET">
-							<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/giao-duc.rss">Giáo Dục</a>
-							<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/phap-luat.rss">Pháp Luật</a>
-							<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/kinh-doanh.rss">Kinh Doanh</a>
-							<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/suc-khoe.rss">Sức Khỏe</a>
-							<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/du-lich.rss">Du Lịch</a>
-							<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/the-thao.rss">Thể Thao</a>
-							<a class="dropdown-item" name="link" href="index.php?link=https://vnexpress.net/rss/khoa-hoc.rss">Khoa Học</a>
+							<a class="dropdown-item" name="link" href="<?php echo base_url();?>index.php?link=https://vnexpress.net/rss/giao-duc.rss">Giáo Dục</a>
+							<a class="dropdown-item" name="link" href="<?php echo base_url();?>index.php?link=https://vnexpress.net/rss/phap-luat.rss">Pháp Luật</a>
+							<a class="dropdown-item" name="link" href="<?php echo base_url();?>index.php?link=https://vnexpress.net/rss/kinh-doanh.rss">Kinh Doanh</a>
+							<a class="dropdown-item" name="link" href="<?php echo base_url();?>index.php?link=https://vnexpress.net/rss/suc-khoe.rss">Sức Khỏe</a>
+							<a class="dropdown-item" name="link" href="<?php echo base_url();?>index.php?link=https://vnexpress.net/rss/du-lich.rss">Du Lịch</a>
+							<a class="dropdown-item" name="link" href="<?php echo base_url();?>index.php?link=https://vnexpress.net/rss/the-thao.rss">Thể Thao</a>
+							<a class="dropdown-item" name="link" href="<?php echo base_url();?>index.php?link=https://vnexpress.net/rss/khoa-hoc.rss">Khoa Học</a>
 						</form>
 					</div>
 				</li>
 			</ul>
-			<form class="form-inline my-2 my-lg-0" action="search.php" method="GET">
+			<form class="form-inline my-2 my-lg-0" action="<?php echo base_url();?>index.php/search" method="GET">
 				<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search" name="search-bar" id="search-bar" onkeyup="success()">
 				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit-search" id="submit-search" disabled>Tìm</button>
 			</form>
@@ -69,11 +69,11 @@
 					if( isset($_SESSION['username']) && !empty($_SESSION['username']) )
 					{
 					?>
-					    <a href="../Web/index.php/login/logout" class="btn btn-outline-primary margin-left">Đăng xuất</a>
+					    <a href="../WebTinTucRSS2/index.php/login/logout" class="btn btn-outline-primary margin-left">Đăng xuất</a>
 					    e
 					<?php }else{ ?>
-					    <a href="../Web/index.php/login" class="btn btn-outline-primary margin-left">Đăng nhập</a>
-						<a href="../Web/index.php/signup" class="btn btn-outline-light margin-left">Đăng kí</a>
+					    <a href="../WebTinTucRSS2/index.php/login" class="btn btn-outline-primary margin-left">Đăng nhập</a>
+						<a href="../WebTinTucRSS2/index.php/signup" class="btn btn-outline-light margin-left">Đăng kí</a>
 					<?php } ?>
 				
 			</form>
