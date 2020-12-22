@@ -4,7 +4,7 @@
 
 <body>
     <div id='addPost_form'>
-		<form action='<?php echo base_url();?>index.php/addPost/process' method='POST' name='process' style="margin-top:50px; margin-bottom: 100px">
+		<form action='<?php echo base_url();?>index.php/addPost/process' method='POST' name='process' enctype="multipart/form-data" style="margin-top:50px; margin-bottom: 100px">
 			<table align="center">
 				<tr>
 					<td colspan="2"><h3 style="color: blue">Thêm bài viết mới</h3></td>
@@ -15,12 +15,21 @@
 				</tr>
 				<tr>
 					<td nowrap="nowrap">Nội dung <b>(*)</b>:</td>
-					<td><textarea name="content" id="content" rows="12" cols="100" style="margin: 10px"></textarea></td>
+					<td>
+						<textarea name="content" id="content" rows="12" cols="100" style="margin: 10px"></textarea>
+						<script>CKEDITOR.replace('content');</script>
+					</td>
 				</tr>
 				<tr>
-					<td nowrap="nowrap">Public? :</td>
+					<td>Chọn ảnh:</td>
 					<td>
-						<input type="checkbox" id="isPublic" name="isPublic" value="1" style="margin: 10px"">Public
+				        <input type="file" name="fileUpload" id="fileUpload" style="margin: 10px">
+    				</td>
+				</tr>
+				<tr>
+					<td nowrap="nowrap">Công khai bài viết?</td>
+					<td>
+						<input type="checkbox" id="isPublic" name="isPublic" value="1" style="margin: 10px"">
 					</td>
 				</tr>
 				<tr>
@@ -34,9 +43,16 @@
 					</td>
 				</tr>
 			</table>	
+
+			
 		</form>
+
+		
     </div>
 </body>
+
+
+
 <?php
 $this->load->view('layout/footer.php');
 ?>
