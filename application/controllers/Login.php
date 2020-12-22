@@ -6,10 +6,9 @@ class Login extends CI_Controller{
         parent::__construct();
     }
     
-    public function index($msg = NULL){
-        $data['msg'] = $msg;
+    public function index(){
         //Load trang login_view
-        $this->load->view('login_view', $data);
+        $this->load->view('login_view');
     }
     
     public function process(){
@@ -19,9 +18,8 @@ class Login extends CI_Controller{
         $result = $this->login_model->validate();
         
         if(!$result){
-            
-            $msg = '<font color=red>Lỗi!</font><br />';
-            $this->index($msg);
+            //Tải lại trang đăng nhập
+            $this->index();
         }else{
             //Chuyển hướng đến trang chủ sau khi đăng nhập thành công
             redirect('');

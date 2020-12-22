@@ -11,9 +11,6 @@
                 <td colspan="2"><h1>Đăng nhập</h1></td>
             </tr>
             <tr>
-                <td><?php if(! is_null($msg)) echo $msg;?></td>
-            </tr>
-            <tr>
                 <td>Tên đăng nhập <b>(*)</b>:</td>
                 <td><input type="text" name="username" value="<?php if (isset($_COOKIE['user'])) echo $_COOKIE['user']; ?>" size="50" style="margin: 15px"></td>
             </tr>

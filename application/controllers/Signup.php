@@ -6,10 +6,9 @@ class Signup extends CI_Controller{
         parent::__construct();
     }
     
-    public function index($msg = NULL){
-        $data['msg'] = $msg;
+    public function index(){
         //Load trang signup_view
-        $this->load->view('signup_view', $data);
+        $this->load->view('signup_view');
     }
     
     public function process(){
@@ -19,9 +18,8 @@ class Signup extends CI_Controller{
         $result = $this->signup_model->validate();
         
         if(!$result){
-            
-            $msg = '<font color=red>Lỗi!</font><br />';
-            $this->index($msg);
+            //Tải lại trang đăng kí
+            $this->index();
         }else{
             //Trả về trang chủ
             redirect('');

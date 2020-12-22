@@ -44,8 +44,6 @@
                             setcookie('user',$username, time()+3600,"/",'',0,0);
                             setcookie('pass',$password, time()+3600,"/",'',0,0);
                         }
-                        //Chuyển hướng đến trang chủ sau khi đăng nhập thành công
-                        //header('Location: index.php');
                         return true;
 
                     }

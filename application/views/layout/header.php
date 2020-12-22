@@ -69,11 +69,11 @@
 					if( isset($_SESSION['username']) && !empty($_SESSION['username']) )
 					{
 					?>
-					    <a href="../WebTinTucRSS2/index.php/login/logout" class="btn btn-outline-primary margin-left">Đăng xuất</a>
+					    <a href="<?php echo base_url();?>index.php/login/logout" class="btn btn-outline-primary margin-left">Đăng xuất</a>
 					    e
 					<?php }else{ ?>
-					    <a href="../WebTinTucRSS2/index.php/login" class="btn btn-outline-primary margin-left">Đăng nhập</a>
-						<a href="../WebTinTucRSS2/index.php/signup" class="btn btn-outline-light margin-left">Đăng kí</a>
+					    <a href="<?php echo base_url();?>index.php/login" class="btn btn-outline-primary margin-left">Đăng nhập</a>
+						<a href="<?php echo base_url();?>index.php/signup" class="btn btn-outline-light margin-left">Đăng kí</a>
 					<?php } ?>
 				
 			</form>
