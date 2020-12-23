@@ -8,17 +8,22 @@
 					$titleP = $row['title'];
 					$contentP = $row['content'];
 					$createDate = $row['createDate'];
-					echo "<div style='border-bottom: 1px solid gray'>
-						<h3>$titleP</h3>
-						<i>Ngày tạo: $createDate</i>
-						<p>$contentP</p>
+					$img=$row['imgPath'];
+					echo "<div class='post' style='border: 1px solid gray;padding: 5px;border-radius:3px;margin-top:15px'>
+					<div class='post-head' style='font-size:14px; color: gray; letter-spacing:1px;'>
+						<h2><a class='feed_title' href='#'>$titleP</a></h2>
+							<span style='font-size:14px; color: gray; letter-spacing:1px;'>$createDate</span>
+						</div>
+							<div class='post-content' style='font-size: 18px; color:black'>
+							<img src='$img' width='700' height='400'/>
+						<h4><a class='feed_description' style='font-size:8px width:small height:small' >$contentP </a></h4>
+						</div>
 					</div>";
 				}
+		$this->load->view('layout/sidebar.php');
 		?>
 	</div>
-<?php
-		    $this->load->view('layout/sidebar.php');
-		?>
+		    
 </div>
 <?php
     $this->load->view('layout/footer.php');

@@ -1,5 +1,5 @@
 
-	<div class="col-sm-2">
+	<div class="col-sm-4">
 	   	<h5>Danh mục</h5>
 	   	<ul class="nav nav-pills flex-column">
 	    	<li class="nav-item"><a  class="nav-link active" href="#">Trang chủ</a></li>
@@ -22,7 +22,8 @@
 		            <li class="nav-item"><a class="nav-link" href="#" >1851010104 - Nguyễn Hoàng Phúc</a> </li>
 		        </ul>
 	       	</li>
-	       	<li class="nav-item"><a class="nav-link" href="#" >Tổng số lượt truy cập</a> </li>
-	    </ul>
+	       	<li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>index.php/addPost" >Thêm tin tức</a> </li>
+			<li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>index.php/listPost" >Xem ds tin tức</a> </li>
+		   </ul>
 	</div>
 

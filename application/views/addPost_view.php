@@ -1,7 +1,6 @@
 <?php
     $this->load->view('layout/header.php');
 ?>
-
 <body>
     <div id='addPost_form'>
 		<form action='<?php echo base_url();?>index.php/addPost/process' method='POST' name='process' enctype="multipart/form-data" style="margin-top:50px; margin-bottom: 100px">
@@ -23,7 +22,7 @@
 				<tr>
 					<td>Chọn ảnh:</td>
 					<td>
-				        <input type="file" name="fileUpload" id="fileUpload" style="margin: 10px">
+				        <input type="file" name="fileUpload" id="fileUpload" accept="image/*" style="margin: 10px">
     				</td>
 				</tr>
 				<tr>

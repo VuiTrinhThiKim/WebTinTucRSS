@@ -1,4 +1,4 @@
-<div class="col-sm-12" style="width: 70%; margin:auto">
+<div class="col-sm-8" style="width: 70%; margin:auto">
 
 
 <?php
@@ -29,6 +29,11 @@ if(!empty($feeds)){
 		if (strpos($item->description, "src=")) {//nếu có hình ảnh trong description thì cắt chuỗi vào array bằng explode
 			$str = explode('src=', $item->description);//chia chuỗi để bỏ thẻ a và img lấy chuỗi sau src
             $str1 = explode('></a></br>', $str[1]);//chia thành src của img và description 
+		}
+		else
+		{
+			$str1[0] = "./images/nopic.png";
+			$str1[1] = $item->description;
 		}
 		 if($i>=15) break;
 ?>

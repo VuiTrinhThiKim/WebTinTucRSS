@@ -7,8 +7,16 @@ class AddPost extends CI_Controller{
     }
 
     public function index(){
+        if(isset($_SESSION['username']))
+        {
+           $this->load->view('addPost_view');
+        }
+        else
+        {
+            $this->load->view('plsLogin');
+        }
         //Load trang addPost_view
-        $this->load->view('addPost_view');
+
     }
     
     public function process(){
@@ -25,5 +33,5 @@ class AddPost extends CI_Controller{
             redirect('');
         }        
     }
-
+    
 }

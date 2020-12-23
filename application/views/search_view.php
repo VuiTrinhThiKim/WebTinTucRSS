@@ -40,7 +40,7 @@ if(!empty($feeds)){
 							<span style='font-size:14px; color: gray; letter-spacing:1px;'>$pubDate</span>
 						</div>
 							<div class='post-content' style='font-size: 18px; color:black'>
-							<img src=$srcImage width='700' height='400'>
+							<img src=$srcImage width='700' height='400'/>
 						<h4><a class='feed_description' style='font-size:8px width:small height:small' >$description </a></h4>
 						</div>
 					</div>";

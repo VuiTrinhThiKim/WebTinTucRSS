@@ -4,7 +4,7 @@
 	$server_username = "root"; 
 	$server_password = ""; 
 	$server_host = "localhost"; 
-	$database = 'website'; 
+	$database = 'rssfeeditems'; 
 
 	//Dùng mysqli_connect() để kết nối csdl
 	$conn = mysqli_connect($server_host,$server_username,$server_password,$database);

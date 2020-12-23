@@ -4,7 +4,7 @@
 
 <body>
     <div id='signup_form'>
-        <form action='<?php echo base_url();?>qlbanhang/index.php/signup/process' method='POST' name='process' style="margin-top:50px; margin-bottom: 100px">
+        <form action='<?php echo base_url();?>index.php/signup/process' method='POST' name='process' style="margin-top:50px; margin-bottom: 100px">
            
             <table border="0" align="center">
             <tr>

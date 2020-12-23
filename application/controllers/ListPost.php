@@ -10,16 +10,28 @@ class ListPost extends CI_Controller {
     }
     public function index()
     {   
-        //Lấy dữ liệu trong listPost_model
-        $result = $this->listPost_model->database_item();
-        //Lưu dữ liệu vào biến data
-        $data['result'] = $result;
-        $this->load->view('listPost_view',$data);
+        if(isset($_SESSION['username']))
+        {//lấy dữ liệu k public của user
+            $id = $this->listPost_model->searchId();
+            $id = $id->row()->id;
+            $resultUser = $this->listPost_model->userPost($id);
+            //Lấy dữ liệu trong listPost_model
+            $result = $this->listPost_model->database_item();
+
+            //Lưu dữ liệu vào biến data
+            $data['result'] = $result;
+            $data['resultUser'] = $resultUser;
+            $this->load->view('listPost_view',$data);
+        }
+        else
+        {
+            $this->load->view('plsLogin');
+        }
     }
     public function viewPost($id)
     {
         $result= $this->listPost_model->viewPost($id);
         $data['result'] = $result;
-        $this->load->view('layout/viewPost', $data);
+        $this->load->view('viewPost', $data);
     }
 }

@@ -9,14 +9,19 @@
 		if($vPost > 0)
 		{
 			foreach($result->result_array() as $row){
-				$titleP = $row['title'];
-				$contentP = $row['content'];
+				$title = $row['title'];
+				$description = $row['content'];
 
-				echo "<div style='border-bottom: 1px solid gray'>
-					<h3>$titleP</h3>
-					<i>Ngày tạo: $data['createdate']/i>
-					<p>$contentP</p>
-				</div>";
+				echo "<div class='post' style='border: 1px solid gray;padding: 5px;border-radius:3px;margin-top:15px'>
+					<div class='post-head' style='font-size:14px; color: gray; letter-spacing:1px;'>
+						<h2><a class='feed_title' href='#'>$title</a></h2>
+							<span style='font-size:14px; color: gray; letter-spacing:1px;'>$pubDate</span>
+						</div>
+							<div class='post-content' style='font-size: 18px; color:black'>
+							<img src=$srcImage width='700' height='400'>
+						<h4><a class='feed_description' style='font-size:8px width:small height:small' >$description </a></h4>
+						</div>
+					</div>";
 			}
 		}
 	?>
