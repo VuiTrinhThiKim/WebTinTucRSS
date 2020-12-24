@@ -11,16 +11,15 @@ class ListPost extends CI_Controller {
     public function index()
     {   
         if(isset($_SESSION['username']))
-        {//lấy dữ liệu k public của user
+        {
             $id = $this->listPost_model->searchId();
             $id = $id->row()->id;
-            $resultUser = $this->listPost_model->userPost($id);
-            //Lấy dữ liệu trong listPost_model
-            $result = $this->listPost_model->database_item();
+            
+            //Lấy dữ liệu tất cả bài public trong listPost_model
+            $result = $this->listPost_model->viewAllPostPublic();
 
             //Lưu dữ liệu vào biến data
             $data['result'] = $result;
-            $data['resultUser'] = $resultUser;
             $this->load->view('listPost_view',$data);
         }
         else
@@ -28,10 +27,21 @@ class ListPost extends CI_Controller {
             $this->load->view('plsLogin');
         }
     }
+    public function userPost($userID)
+    {
+        //Lấy dữ liệu k public của user
+        $resultUserNotPublic = $this->listPost_model->userPostNotPublic($userID);
+        //Lấy dữ liệu public của user
+        $resultUserPublic = $this->listPost_model->userPostPublic($userID);
+
+        $data['resultUserNotPublic'] = $resultUserNotPublic;
+        $data['resultUserPublic'] = $resultUserPublic;
+        $this->load->view('layout/viewUsersPost', $data);
+    }
     public function viewPost($id)
     {
         $result= $this->listPost_model->viewPost($id);
         $data['result'] = $result;
-        $this->load->view('viewPost', $data);
+        $this->load->view('layout/viewPost', $data);
     }
 }

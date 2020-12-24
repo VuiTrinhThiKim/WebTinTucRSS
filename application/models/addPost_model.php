@@ -22,7 +22,7 @@
 					if (isset($_POST["isPublic"])) {
 						$isPublic = $_POST["isPublic"];
 					}
-					$userID = $_SESSION["user_id"];
+					$userID = $_SESSION["userID"];
 					$target_dir = "./images/";
 					$target_file = $target_dir . basename($_FILES["fileUpload"]["name"]);//images/tênfile
 					if (move_uploaded_file($_FILES["fileUpload"]["tmp_name"], $target_file)) {
@@ -31,7 +31,7 @@
 						echo "Lỗi khi upload file";
 					}
 					$imgPath = $target_file;
-					$this->db->query("INSERT INTO posts(title, content, user_id, imgPath, isPublic, createDate, updateDate ) VALUES ( '$title', '$content', '$userID', '$imgPath', '$isPublic', now(), now())");
+					$this->db->query("INSERT INTO posts(title, content, userID, imgPath, isPublic, createDate, updateDate ) VALUES ( '$title', '$content', '$userID', '$imgPath', '$isPublic', now(), now())");
 					echo "<div class='alert alert-success' role='alert'><h5 style='text-align: center; color: blue'>Bài viết đã thêm thành công</h5></div>";
 
 					return true;

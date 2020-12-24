@@ -22,8 +22,14 @@
 		            <li class="nav-item"><a class="nav-link" href="#" >1851010104 - Nguyễn Hoàng Phúc</a> </li>
 		        </ul>
 	       	</li>
-	       	<li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>index.php/addPost" >Thêm tin tức</a> </li>
-			<li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>index.php/listPost" >Xem ds tin tức</a> </li>
+	       	<li class="nav-item dropdown active">
+		        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tin Tự Đăng</a> 
+		        <ul class="dropdown-menu" >
+		            <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>index.php/addPost" >Đăng bài</a> </li>
+		            <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>index.php/listPost" >Bài trong diễn dàn</a> </li>
+		            <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>index.php/listPost/userPost">Bài viết của tôi</a> </li>
+		        </ul>
+	       	</li>
 		   </ul>
 	</div>
 

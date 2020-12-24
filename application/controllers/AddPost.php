@@ -9,14 +9,13 @@ class AddPost extends CI_Controller{
     public function index(){
         if(isset($_SESSION['username']))
         {
+            //Load trang addPost_view
            $this->load->view('addPost_view');
         }
         else
         {
             $this->load->view('plsLogin');
         }
-        //Load trang addPost_view
-
     }
     
     public function process(){
@@ -29,8 +28,8 @@ class AddPost extends CI_Controller{
             //Trở lại trang đăng nhập
             $this->index();
         }else{
-            //Chuyển hướng đến trang chủ sau khi đăng nhập thành công
-            redirect('');
+            //Chuyển hướng đến xem danh sách bài viết sau đăng bài thành công
+            redirect('listPost');
         }        
     }
     

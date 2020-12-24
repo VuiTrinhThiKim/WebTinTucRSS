@@ -43,7 +43,7 @@
 					<a class="nav-link" href="index.php?link=https://vnexpress.net/rss/thoi-su.rss">TIN THỜI SỰ<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="#">TIN TRONG DIỄN ĐÀN</a>
+					<a class="nav-link" href="<?php echo base_url();?>index.php/listPost">TIN TRONG DIỄN ĐÀN</a>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
