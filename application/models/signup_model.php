@@ -7,14 +7,12 @@
         
     public function validate(){
         require_once("application/views/layout/connection.php");
-
         if(isset($_POST["btnSubmit"])) {
             //Lấy thông tin btnSubmit Đăng kí 
             $username = $_POST["username"];
             $password = $_POST["password"];
             $name = $_POST["name"];
             $email = $_POST["email"];
-
             //Kiểm tra dữ liệu trong input không được rỗng
             if($username == "" || $password == "" || $_POST["passwordcheck"] == "" || $name == "" || $email == "") {
                 echo "<div class='alert alert-warning' role='alert'><h5 style='text-align: center; color: red'>Bạn vui lòng nhập đầy đủ thông tin! <a href='javascript: history.go(-1)'>Trở lại</a></h5></div>";

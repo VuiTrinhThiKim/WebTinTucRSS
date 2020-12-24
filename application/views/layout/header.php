@@ -73,7 +73,7 @@
 					{
 					?>
 					    <a href="<?php echo base_url();?>index.php/login/logout" class="btn btn-outline-primary margin-left">Đăng xuất</a>
-					    e
+					    
 					<?php }else{ ?>
 					    <a href="<?php echo base_url();?>index.php/login" class="btn btn-outline-primary margin-left">Đăng nhập</a>
 						<a href="<?php echo base_url();?>index.php/signup" class="btn btn-outline-light margin-left">Đăng kí</a>

@@ -14,7 +14,7 @@
 		$j = 0;
 		$lPostNotPubic = $resultUserNotPublic->num_rows();
 		$lPostPubic = $resultUserPublic->num_rows();
-			//in kq
+			//Tin bạn đã đăng không public
 			if($lPostNotPubic > 0)
 			{
 				echo "<h3 style='color:red'>Tin bạn đã đăng không public</h3>";
@@ -37,6 +37,7 @@
 				}
 			}
 			else {echo "  Không tìm thấy bài viết nào!!!. <br>";}
+			//Tin bạn đã đăng public
 			if($lPostPubic > 0)
 			{
 				echo "<h3 style='color:red'>Tin bạn đã đăng public</h3>";

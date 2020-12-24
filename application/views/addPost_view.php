@@ -41,17 +41,10 @@
 						<input type="reset" class="btn btn-outline-secondary" value="Hủy">
 					</td>
 				</tr>
-			</table>	
-
-			
-		</form>
-
-		
+			</table>				
+		</form>		
     </div>
 </body>
-
-
-
 <?php
 $this->load->view('layout/footer.php');
 ?>

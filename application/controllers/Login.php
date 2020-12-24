@@ -27,9 +27,10 @@ class Login extends CI_Controller{
     }
 
     public function logout(){
-
+        //Kiểm tra phiên đã lưu username chưa
         if (isset($_SESSION['username'])){
-            unset($_SESSION['username']); // xóa session Đăng nhập
+            unset($_SESSION['username']); // xóa dữ liệu username Đăng nhập trong phiên
+            // Có thể dùng hàm session_destroy(); để hủy toàn bộ phiên
         }
 
         //Chuyển hướng đến trang chủ sau khi đăng xuất thành công

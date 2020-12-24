@@ -17,7 +17,6 @@
 
                 if ($username == "" || $password =="") {
                     echo "<div class='alert alert-warning' role='alert'><h5 style='text-align: center; color: red; margin: 20px'>Bạn phải nhập đủ thông tin tên đăng nhập và mật khẩu!</h5></div>";
-
                 }
                 else{
                     $passwordMD5 = md5($password);
@@ -40,12 +39,11 @@
                         //Lưu cookie đăng nhập khi checkbox Ghi nhớ đăng nhập được chọn
                         if(isset($_POST['isCheck']))
                         {
-
+                            //setcookie(name, value, expire, path, domain, secure, httponly);
                             setcookie('user',$username, time()+3600,"/",'',0,0);
                             setcookie('pass',$password, time()+3600,"/",'',0,0);
                         }
                         return true;
-
                     }
                     return false;
                 }

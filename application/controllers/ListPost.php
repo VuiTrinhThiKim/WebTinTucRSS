@@ -6,7 +6,7 @@ class ListPost extends CI_Controller {
      {
         parent::__construct();
         //Load trang listPost_model
-        $this->load->Model("listPost_model"); 
+        $this->load->model("listPost_model"); 
     }
     public function index()
     {   
@@ -29,9 +29,10 @@ class ListPost extends CI_Controller {
     }
     public function userPost()
     {
+        //Lấy dữ liệu id
         $userID = $this->listPost_model->searchID();
         $userID = $userID->row()->id;
-        //Lấy dữ liệu k public của user
+        //Lấy dữ liệu không public của user
         $resultUserNotPublic = $this->listPost_model->userPostNotPublic($userID);
         //Lấy dữ liệu public của user
         $resultUserPublic = $this->listPost_model->userPostPublic($userID);

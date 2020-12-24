@@ -7,7 +7,9 @@
 		<?php 
 			$this->load->view('layout/sidebar.php');
 		?>
+
 		<?php
+		//Hiển thị nội dung bài viết vừa click
 		foreach($result->result_array() as $row){
 					$titleP = $row['title'];
 					$contentP = $row['content'];
@@ -20,7 +22,7 @@
 							<span style='font-size:14px; color: gray; letter-spacing:1px;'>$createDate</span>
 						</div>
 							<div class='post-content' style='font-size: 18px; color:black'>
-							<img src='$img' width='800' height='500'>
+							<img src='$img' width='700' height='400'>
 						<p class='feed_description' style='font-size:8px width:small height:small' >$contentP</p>
 						</div>
 					</div>";

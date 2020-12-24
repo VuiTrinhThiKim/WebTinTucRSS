@@ -10,20 +10,21 @@
 	<div class="col-sm-8" style="width: 70%; margin:auto">
 	<?php
 		echo "<h1>DANH SÁCH BÀI VIẾT</h1>";
-		$i = 0;
 
+		//Xử lí hiện danh sách bài viết
+		$i = 0;
+		//Đếm số dòng trả về
 		$lPost = $result->num_rows();
-			//in kq
 			if($lPost > 0)
 			{
 				foreach($result->result_array() as $row){
-					$titleP = $row['title'];
-					$contentP = $row['content'];
-					$contentP100 = substr($contentP, 0, 100);
-					$href = site_url('ListPost/viewPost/'.$row['id']);
-					$url = "<a href='".$href."'>Xem Thêm</a>";
-					$createDate = $row['createDate'];
-					$img = ".".$row['imgPath'];
+					$titleP = $row['title']; //Lấy tiêu đề bài viết
+					$contentP = $row['content']; //Nội dung bài viết
+					$contentP100 = substr($contentP, 0, 100); //100 kí tự đầu của nọi dung
+					$href = site_url('ListPost/viewPost/'.$row['id']); //đường dẫn đến id bài viết
+					$url = "<a href='".$href."'>Xem Thêm</a>"; //Link xem thêm chứa id bài viết
+					$createDate = $row['createDate']; //Ngày tạo
+					$img = ".".$row['imgPath']; //Địa chỉ hình ảnh
 
 					echo "<div style='border: 1px solid gray'>
 						<h3>$titleP</h3>

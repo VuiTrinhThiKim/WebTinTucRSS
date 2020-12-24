@@ -1,7 +1,6 @@
 <?php
     $this->load->view('layout/header.php');
 ?>
-
 <body>
     <div id='signup_form'>
         <form action='<?php echo base_url();?>index.php/signup/process' method='POST' name='process' style="margin-top:50px; margin-bottom: 100px">
@@ -20,7 +19,7 @@
             </tr>
             <tr>
                 <td>Nhập lại mật khẩu <b>(*)</b>:</td>
-                <td><input type="password" id="passcheck" name="passwordcheck" size="50" style="margin: 15px; ma"></td>
+                <td><input type="password" id="passcheck" name="passwordcheck" size="50" style="margin: 15px"></td>
             </tr>
             <tr>
                 <td>Họ và tên: <b>(*)</b></td>
