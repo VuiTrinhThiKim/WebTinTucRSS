@@ -40,9 +40,6 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="index.php?link=https://vnexpress.net/rss/thoi-su.rss">TIN THỜI SỰ<span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
 					<a class="nav-link" href="<?php echo base_url();?>index.php/listPost">TIN TRONG DIỄN ĐÀN</a>
 				</li>
 				<li class="nav-item dropdown">
