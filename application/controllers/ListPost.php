@@ -27,8 +27,10 @@ class ListPost extends CI_Controller {
             $this->load->view('plsLogin');
         }
     }
-    public function userPost($userID)
+    public function userPost()
     {
+        $userID = $this->listPost_model->searchID();
+        $userID = $userID->row()->id;
         //Lấy dữ liệu k public của user
         $resultUserNotPublic = $this->listPost_model->userPostNotPublic($userID);
         //Lấy dữ liệu public của user

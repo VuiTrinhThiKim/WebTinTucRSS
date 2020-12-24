@@ -21,12 +21,12 @@
         }
         public function userPostNotPublic($userID)
         {
-            $que = $this->db->query("SELECT * FROM posts WHERE userID = $userID AND isPublic = 0");
+            $que = $this->db->query("SELECT * FROM posts WHERE user_id = $userID AND isPublic = 0");
             return $que;
         }
         public function userPostPublic($userID)
         {
-            $que = $this->db->query("SELECT * FROM posts WHERE userID = $userID AND isPublic = 1");
+            $que = $this->db->query("SELECT * FROM posts WHERE user_id = $userID AND isPublic = 1");
             return $que;
         }
         public function viewPost($id){

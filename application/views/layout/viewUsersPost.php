@@ -25,11 +25,11 @@
 						$href = site_url('ListPost/viewPost/'.$row['id']);
 						$url = "<a href='".$href."'>Xem Thêm</a>";
 						$createDate = $row['createDate'];
-						$img = "../../.".$row['imgPath'];
+						$img = "../.".$row['imgPath'];
 						echo "<div style='border: 1px solid gray'>
 						<h3>$titleP</h3>
 						<span style='font-size:14px; color: gray; letter-spacing:1px;'>$createDate</span>
-						<img src='$img' width='800' height='500'>
+						<img src='$img' width='700' height='400'>
 						<p>$contentP100...</p>
 						<p>$url</p>
 					</div>";
@@ -47,11 +47,11 @@
 						$href = site_url('ListPost/viewPost/'.$row['id']);
 						$url = "<a href='".$href."'>Xem Thêm</a>";
 						$createDate = $row['createDate'];
-						$img = "../../.".$row['imgPath'];
+						$img = "../.".$row['imgPath'];
 						echo "<div style='border: 1px solid gray'>
 						<h3>$titleP</h3>
 						<span style='font-size:14px; color: gray; letter-spacing:1px;'>$createDate</span>
-						<img src='$img' width='800' height='500'>
+						<img src='$img' width='700' height='400'>
 						<p>$contentP100...</p>
 						<p>$url</p>
 					</div>";
